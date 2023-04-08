@@ -1,5 +1,5 @@
 const clientId = "82455fcc59e24efd9cedc98ec2b8ddb4";
-const redirectUri = "https://git.heroku.com/spotlist.git";
+const redirectUri = "https://spotlist.herokuapp.com/";
 let accessToken;
 
 const Spotify = {
