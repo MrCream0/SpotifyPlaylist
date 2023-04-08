@@ -85,5 +85,6 @@ class App extends React.Component{
   }
 }
 
+Spotify.getAccessToken();
 
 export default App;

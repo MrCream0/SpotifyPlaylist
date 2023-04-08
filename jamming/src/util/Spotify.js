@@ -1,5 +1,5 @@
 const clientId = "82455fcc59e24efd9cedc98ec2b8ddb4";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://git.heroku.com/spotlist.git";
 let accessToken;
 
 const Spotify = {
@@ -52,7 +52,7 @@ const Spotify = {
     const headers = { Authorization: `Bearer ${accessToken}` };
     let userId;
 
-    return fetch("https://api.spotify.com/v1/me", { headers: headers }) // vaja kontrollida Spotify dok
+    return fetch("https://api.spotify.com/v1/me", { headers: headers }) 
       .then((response) => response.json())
       .then((jsonResponse) => {
         userId = jsonResponse.id;
