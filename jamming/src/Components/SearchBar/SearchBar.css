@@ -10,7 +10,7 @@ html {
 
 h1 {
   padding: .77rem 0;
-  background-color: #010c3f;
+  background-image: url("E:\VisualStudioScripts\SpotifyPlaylistCC\jamming\src\Components\wall-g7ac90aabb_1920.jpg");
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.88rem;
@@ -18,7 +18,7 @@ h1 {
 }
 
 h1 .highlight {
-  color: #6c41ec;
+  color: #4c4857;
 }
 
 h2 {
@@ -29,7 +29,7 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-color: #010c3f;
+  background-color: #383646;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
