@@ -1,6 +1,7 @@
 const clientId = "82455fcc59e24efd9cedc98ec2b8ddb4";
 const redirectUri = "https://spotify-playlist-two.vercel.app/";
 let accessToken;
+let userId;
 
 const Spotify = {
   getAccessToken() {
@@ -50,9 +51,8 @@ const Spotify = {
     }
     const accessToken = Spotify.getAccessToken();
     const headers = { Authorization: `Bearer ${accessToken}` };
-    let userId;
 
-    return fetch("https://api.spotify.com/v1/me", { headers: headers }) 
+    return fetch("https://api.spotify.com/v1/me", { headers: headers })
       .then((response) => response.json())
       .then((jsonResponse) => {
         userId = jsonResponse.id;
@@ -75,6 +75,30 @@ const Spotify = {
           });
       });
   },
+
+  /*getUserPlaylists() {
+    return this.getCurrentUserIs().then(userId => {
+      return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      }).then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Request failed!');
+      }, networkError => console.log(networkError.message)
+      ).then(jsonResponse => {
+        const playlists = jsonResponse.items.map(playlist => {
+          return {
+            playlistId: item.id,
+            name: item.name,
+          }
+        });
+        this.setState({ playlists: playlists });
+      });
+    });
+  },*/
 };
 
 export default Spotify;
